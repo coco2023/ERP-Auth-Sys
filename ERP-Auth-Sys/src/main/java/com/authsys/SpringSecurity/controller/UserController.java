@@ -1,5 +1,6 @@
 package com.authsys.SpringSecurity.controller;
 
+import com.authsys.SpringSecurity.external.response.ProductResponse;
 import com.authsys.SpringSecurity.model.UserRegisterRequest;
 import com.authsys.SpringSecurity.model.UserRepresentation;
 import com.authsys.SpringSecurity.model.UserUpdateRequest;
@@ -13,6 +14,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
@@ -44,5 +46,10 @@ public class UserController {
         return ResponseEntity.ok().build();
     }
 
-
+    @GetMapping("/products")
+    @PreAuthorize("hasAnyRole('ROLE_USER','ROLE_MANAGER','ROLE_ADMIN')")
+    public ResponseEntity<List<ProductResponse>> viewAllProduct() {
+        List<ProductResponse> allProducts = userService.getAllProduct();
+        return ResponseEntity.ok().body(allProducts);
+    }
 }
