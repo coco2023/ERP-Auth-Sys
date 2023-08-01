@@ -1,0 +1,94 @@
+<!-- <div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="connect">Authorization</label>
+            <input type="text" class="form-control" id="accessToken" />
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="row">
+  <div class="col-md-6">
+    <form>
+      <div class="form-group">
+        <label for="connect">Chat Application:</label>
+        <button
+          id="connect"
+          class="form-control mb-2 btn btn-success text-light"
+          type="button"
+        >
+          Start New Chat
+        </button>
+        <button
+          id="disconnect"
+          class="form-control btn btn-danger text-light"
+          type="button"
+          disabled="disabled"
+        >
+          End Chat
+        </button>
+      </div>
+    </form>
+  </div>
+</div> -->
+
+
+
+  <!-- -->
+  <div>
+    <h2>WebSocket Example</h2>
+    <div *ngIf="isConnected; else notConnected">
+      <input [(ngModel)]="messageToSend" placeholder="Type a message">
+      <button (click)="sendMessage()">Send Message</button>
+      <button (click)="webService.closeWebSocket()">Disconnect</button>
+    </div>
+    <ng-template #notConnected>
+      <p>WebSocket is not connected.</p>
+      <button (click)="connectWebSocket()">Connect WebSocket</button>
+    </ng-template>
+  </div>      
+
+  <!-- <div class="row">
+    <div class="col-md-6">
+      <table id="chat">
+        <tbody id="chatmessages"></tbody>
+      </table>
+    </div>
+  </div>
+
+</div> -->
+
+
+<!-- <div id="chatbox" style="display: none"> -->
+    <!-- Add input fields for user object properties here -->
+  <!-- <div>
+    <label for="senderId">senderId:</label>
+    <input
+      type="text"
+      id="senderId"
+      [(ngModel)]="sendMessageRequest.senderId"
+    />
+    <label for="sendTo">sendTo:</label>
+    <input type="text" id="sendTo" [(ngModel)]="sendMessageRequest.sendTo" />
+    <label for="msg">msg:</label>
+    <input type="text" id="msg" [(ngModel)]="sendMessageRequest.msg" /> -->
+
+    <!-- ... Add more input fields as needed -->
+
+    <!-- <label for="authToken">Authorization Token:</label>
+    <input type="text" id="authToken" [(ngModel)]="authToken" />
+    <button (click)="sendMessage()">sendMessage</button> -->
+
+    <!-- Display user details here -->
+    <!-- <div *ngIf="sendMessageRequest">
+      <h2>Message Details</h2>
+      <p>Details: {{ sendMessageResponse }}</p> -->
+      <!-- Add more user properties as needed -->
+    <!-- </div>
+  </div> -->
+
+  <!-- receive message -->
+  <!-- <p>receive message:  </p>
+  <div *ngFor="let message of receivedMessages">
+    <strong>Received:</strong> {{ message }}
+  </div> -->

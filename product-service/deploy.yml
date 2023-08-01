@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: erp-deploy
+  labels:
+    app: erp-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: erp-app
+  template:
+    metadata:
+      labels:
+        app: erp-app
+    spec:
+      containers:
+        - name: erp-app-pod
+          image: hahaha12353/erp-product-service
+          ports:
+            - containerPort: 9001

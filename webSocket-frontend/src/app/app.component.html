@@ -1,0 +1,10 @@
+<!-- src/app/app.component.html -->
+<div>
+  <h1>Angular WebSocket Kafka Demo</h1>
+  <input type="text" [(ngModel)]="messageToSend" placeholder="Enter your message" />
+  <button (click)="sendMessage()">Send Message</button>
+
+  <div *ngFor="let message of receivedMessages">
+    <strong>Received:</strong> {{ message }}
+  </div>
+</div>
